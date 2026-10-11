@@ -51,6 +51,18 @@ st.markdown("""
     border-radius: 8px;
     transition: all 0.2s;
 }
+/* Chat input luôn cố định ở dưới màn hình */
+[data-testid="stBottom"] {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 999 !important;
+    background: transparent;
+}
+div[data-testid="stChatInput"] {
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 999 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
