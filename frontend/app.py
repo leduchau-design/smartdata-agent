@@ -51,17 +51,20 @@ st.markdown("""
     border-radius: 8px;
     transition: all 0.2s;
 }
-/* Chat input luôn cố định ở dưới màn hình */
-[data-testid="stBottom"] {
-    position: sticky !important;
+/* Chat input luôn cố định ở dưới cùng */
+.stChatInput {
+    position: fixed !important;
     bottom: 0 !important;
-    z-index: 999 !important;
-    background: transparent;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    padding: 12px 1rem !important;
+    background: var(--background-color, #0e1117) !important;
+    border-top: 1px solid rgba(255,255,255,0.08) !important;
 }
-div[data-testid="stChatInput"] {
-    position: sticky !important;
-    bottom: 0 !important;
-    z-index: 999 !important;
+/* Thêm padding dưới cùng để tin nhắn không bị che bởi input */
+.stChatMessage:last-of-type {
+    margin-bottom: 80px;
 }
 </style>
 """, unsafe_allow_html=True)
